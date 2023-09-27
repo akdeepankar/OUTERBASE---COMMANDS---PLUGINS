@@ -75,10 +75,10 @@ class OuterbasePluginCell_$PLUGIN_ID extends HTMLElement {
                 this.activeUtterance = null; // Clear the active utterance
                 soundButton.textContent = '🔊'; // Change button icon to "music"
             } else {
-                // If no active utterance, speak the text
+                // If no active utterance, it will speak the text
                 this.activeUtterance = this.speakText(textElement.textContent);
                 this.activeUtterance.onend = () => {
-                    // Clear the active utterance when speech ends
+                    // Clear the active utterance when the speech ends
                     this.activeUtterance = null;
                     soundButton.textContent = '🔊'; // Change button icon to "music"
                 };
